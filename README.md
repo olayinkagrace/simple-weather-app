@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
 
-## Getting Started
+This project is a simple weather app built with React that allows users to fetch and display current weather information for a specified location.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Search Weather**: Users can enter a location (city or zip code) to get the current weather.
+- **API Integration**: Weather data is fetched from the OpenWeatherMap API.
+- **Loading State**: A loading indicator is shown while fetching data.
+- **Error Handling**: Displays an error message if the API call fails.
+- **Responsive Design**: The app is styled for a clean and user-friendly experience across devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository**:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   git clone https://github.com/yourusername/weather-app.git
+   cd weather-app
 
-## Learn More
+2. **Install dependencies:**:
+   npm install
 
-To learn more about Next.js, take a look at the following resources:
+3. **Add your OpenWeatherMap API Key:**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Create a .env.local file in the project root.
+    Add your API key as follows:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    NEXT_PUBLIC_API_KEY=your_api_key_here
 
-## Deploy on Vercel
+4. **Run the app:**
+   npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Run Unit Tests**
+   npm run test
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Folder Structure
+
+    src/
+    |-- components/
+    | |-- WeatherComponent.js
+    | |-- WeatherForm.js
+    | |-- WeatherDetails.js
+    | |-- Loader.js
+    |-- **tests**/
+    | |-- WeatherComponent.test.js
+
+## Testing
+
+This project uses Jest and React Testing Library for unit tests.
+
+To run the tests, use npm run test.
+Tests are located in the **tests** folder.
